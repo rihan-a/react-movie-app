@@ -3,7 +3,7 @@ import SearchIcon from "./search.svg";
 import "./SearchField.css";
 
 // OMDB API URL for Movies
-const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=5afa1f51";
+const API_URL = "https://www.omdbapi.com/?i=tt3896198&apikey=5afa1f51";
 
 const SearchField = (props) => {
     const [searchTerm, setSearchTerm] = useState("");
