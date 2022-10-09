@@ -1,45 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import SearchIcon from "./search.svg";
-import MovieCard from "./MovieCard.jsx";
 
-// OMDB API URL for Movies
-const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=5afa1f51";
+import MovieCard from "./MovieCard.jsx";
+import SearchField from "./SearchField.js";
 
 const App = () => {
     const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
-
-    const searchMovies = async (title) => {
-        const response = await fetch(`${API_URL}&s=${title}`);
-        const data = await response.json();
-        setMovies(data.Search);
-    };
-
-    useEffect(() => {
-        searchMovies(searchTerm);
-    }, []);
 
     return (
         <div className="app">
-            <h1>MOVIE-APP</h1>
+            <h1>MOVIEFLIX</h1>
 
-            <div className="search">
-                <input
-                    placeholder="Search for movies"
-                    onChange={(e) => {
-                        setSearchTerm(e.target.value);
-                    }}
-                    value={searchTerm}
-                />
-                <img
-                    src={SearchIcon}
-                    alt="search icon"
-                    onClick={() => {
-                        searchMovies(searchTerm);
-                    }}
-                />
-            </div>
+            {/* Input search field that collects the title proviede by the user and updates the searchTerm state  */}
+            <SearchField onSetMovies={setMovies} />
 
             {movies?.length > 0 ? (
                 <div className="container">
