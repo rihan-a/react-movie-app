@@ -3,15 +3,8 @@ import "./App.css";
 import SearchIcon from "./search.svg";
 import MovieCard from "./MovieCard.jsx";
 
+// OMDB API URL for Movies
 const API_URL = "http://www.omdbapi.com/?i=tt3896198&apikey=5afa1f51";
-
-const MovieTest = {
-    Title: "The Matrix",
-    Year: "1999",
-    imdbID: "tt0133093",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
-};
 
 const App = () => {
     const [movies, setMovies] = useState([]);
@@ -29,7 +22,8 @@ const App = () => {
 
     return (
         <div className="app">
-            <h1>LIESEFLIX</h1>
+            <h1>MOVIE-APP</h1>
+
             <div className="search">
                 <input
                     placeholder="Search for movies"
