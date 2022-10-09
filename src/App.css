@@ -10,6 +10,7 @@
 :root {
     --font-roboto: "Roboto Slab", serif;
     --font-raleway: "Raleway", sans-serif;
+    --font-Bebas: "Bebas Neue", cursive;
 }
 
 body {
@@ -43,14 +44,12 @@ h1 {
 }
 
 .search {
-    width: 71%;
+    width: 70%;
     margin: 4rem 0 2rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 1.5rem 1.75rem;
+    padding: 1.2rem 1.75rem;
     border-radius: 3rem;
     background: #1f2123;
     -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
@@ -159,7 +158,6 @@ h1 {
     z-index: 2;
     background-color: #343739;
     padding: 16px 24px 24px 24px;
-
     position: absolute;
     bottom: 0;
     right: 0;
@@ -177,8 +175,8 @@ h1 {
 
 .movie div:nth-of-type(3) h3 {
     margin-top: 5px;
-    font-family: "Roboto Slab", serif;
-    color: #f9d3b4;
+    font-family: "Raleway", sans-serif;
+    color: white;
 }
 
 .movie:hover div:nth-of-type(2) {
