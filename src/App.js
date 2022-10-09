@@ -11,7 +11,7 @@ const App = () => {
         <div className="app">
             <h1>MOVIEFLIX</h1>
 
-            {/* Input search field that collects the title proviede by the user and updates the searchTerm state  */}
+            {/* Input search field that collects the title provided by the user and updates the searchTerm state  */}
             <SearchField onSetMovies={setMovies} />
 
             {movies?.length > 0 ? (
@@ -21,10 +21,7 @@ const App = () => {
                     ))}
                 </div>
             ) : (
-                <div className="empty">
-                    {" "}
-                    <h2>No Movies found</h2>
-                </div>
+                <div className="empty"> {/* <h2>No Movies found</h2> */}</div>
             )}
         </div>
     );
