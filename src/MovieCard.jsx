@@ -1,8 +1,11 @@
 import React from "react";
 
 const MovieCard = ({ movie }) => {
+    // Url to the imdb page for the clicked movie
+    const imdbUrl = `https://www.imdb.com/title/${movie.imdbID}/`;
+
     return (
-        <div className="movie">
+        <div className="movie" onClick={() => window.open(imdbUrl, "_blank")}>
             <div>
                 <p>{movie.Year}</p>
             </div>
