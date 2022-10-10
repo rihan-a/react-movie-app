@@ -42,12 +42,12 @@ h1 {
     width: fit-content;
     font-family: "Bebas Neue", cursive;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .empty {
     width: 100%;
     margin-top: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +73,7 @@ h1 {
     height: 460px;
     margin: 1rem;
     position: relative;
-    border-radius: 6px;
+    border-radius: 0px;
     overflow: hidden;
     border: none;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
@@ -154,7 +154,7 @@ h1 {
 
 @media screen and (max-width: 400px) {
     .app {
-        padding: 4rem 1rem;
+        padding: 3rem 1rem;
     }
 
     h1 {
@@ -162,7 +162,7 @@ h1 {
     }
 
     .container {
-        margin-top: 1rem;
+        margin-top: 0rem;
     }
 
     .movie {
